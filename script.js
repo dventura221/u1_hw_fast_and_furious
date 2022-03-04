@@ -31,17 +31,17 @@ window.onload = function (event) {
   // Part 3
 
   let favList = document.querySelector('#favorite-things')
-  // const favListArr = Array.from(favList)
-  // console.log(favListArr)
   favList.removeChild(favList.lastElementChild)
 
   // Part 4
 
   let titles = document.querySelectorAll('.special-title')
-  let titlesArr = Array.from(titles)
-  for (let i = 0; i < titlesArr.length; i++) {
-    titlesArr[i].style.fontSize = '2rem'
-  }
+  // let titlesArr = Array.from(titles)
+  // for (let i = 0; i < titlesArr.length; i++) {
+  //   titlesArr[i].style.fontSize = '2rem'
+  // }
+  // Saw another student use this ^^, but not sure why it works, used forEAch instead.
+  titles.forEach((element) => (element.style.fontSize = '2rem'))
 
   // Part 5
   //remove child
@@ -66,12 +66,12 @@ window.onload = function (event) {
   newDiv.classList.add('blog-post')
   newDiv.classList.add('purple')
   mainDiv[0].appendChild(newDiv)
-
+  //^^ Nick shared this tip, no idea how it works, Nodes???
   let newH1 = document.createElement('h1')
   newH1.innerHTML = 'Denver'
   newDiv.appendChild(newH1)
 
   let newP = document.createElement('p')
-  newP.innerHTML = 'I got cursed by Blucifer at DIA!'
+  newP.innerHTML = 'I GOT CURSED BY BLUCIFER AT DIA!'
   newDiv.appendChild(newP)
 }
